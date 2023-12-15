@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npm run grpc-generate && tsc -p .",
     "fmt": "prettier -w .",
-    "prepare": "npm run tsc -p .",
+    "prepare": "tsc -p .",
     "grpc-generate": "protoc -I../yellowstone-grpc-proto/proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_opt=forceLong=string --ts_proto_opt=outputServices=grpc-js --ts_proto_out=./src/grpc geyser.proto"
   },
   "repository": {
